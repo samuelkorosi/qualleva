@@ -1,8 +1,8 @@
 :root {
     color-scheme: light dark;
-    --bg: #f8fafc;
-    --card: #fff;
-    --tx: #333;
+    --bg: #efefef;
+    --card: #f8fafc;
+    --tx: #3D4657;
     --tx2: #475569;
     --borda: #64748b;
     --verde: #047857;
@@ -10,6 +10,7 @@
     --verde-br: #059669;
     --on-verde: #fff;
 }
+
 
 @media (prefers-color-scheme:dark) {
     :root {
