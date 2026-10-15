@@ -2,13 +2,13 @@
     color-scheme: light dark;
     --bg: #f8fafc;
     --card: #fff;
-    --tx: #0f172a;
+    --tx: #333;
     --tx2: #475569;
     --borda: #64748b;
     --verde: #047857;
     --verde-bg: #ecfdf5;
     --verde-br: #059669;
-    --on-verde: #fff
+    --on-verde: #fff;
 }
 
 @media (prefers-color-scheme:dark) {
@@ -21,7 +21,7 @@
         --verde: #34d399;
         --verde-bg: #052e22;
         --verde-br: #34d399;
-        --on-verde: #052e22
+        --on-verde: #052e22;
     }
 }
 
@@ -29,36 +29,36 @@
     box-sizing: border-box;
     margin: 0;
     font: inherit;
-    -webkit-tap-highlight-color: transparent
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
     background: var(--bg);
     color: var(--tx);
     font: 1.125rem/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    padding: env(safe-area-inset-top) 16px calc(32px + env(safe-area-inset-bottom))
+    padding: env(safe-area-inset-top) 16px calc(32px + env(safe-area-inset-bottom));
 }
 
 main,
 .topo {
     max-width: 520px;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 .topo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 0
+    padding: 16px 0;
 }
 
 h1 {
     font-size: 1.75rem;
-    font-weight: 800
+    font-weight: 800;
 }
 
 h1 span {
-    color: var(--verde)
+    color: var(--verde);
 }
 
 #limpar {
@@ -68,7 +68,14 @@ h1 span {
     border-radius: 999px;
     background: none;
     color: var(--tx);
-    font-weight: 700
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+#limpar:active {
+    transform: scale(0.95);
+    background-color: var(--verde-bg);
+    border: 2px solid var(--verde);
 }
 
 .seg {
@@ -79,7 +86,7 @@ h1 span {
     background: var(--card);
     border: 2px solid var(--borda);
     border-radius: 18px;
-    margin-bottom: 12px
+    margin-bottom: 12px;
 }
 
 .seg button {
@@ -92,22 +99,26 @@ h1 span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+}
+
+.seg button:hover {
+    background: var(--verde-bg);
 }
 
 .seg small {
     font-size: .85rem;
     font-weight: 500;
-    color: var(--tx2)
+    color: var(--tx2);
 }
 
 .seg button[aria-pressed=true] {
     background: var(--verde);
-    color: var(--on-verde)
+    color: var(--on-verde);
 }
 
 .seg button[aria-pressed=true] small {
-    color: var(--on-verde)
+    color: var(--on-verde);
 }
 
 .resultado {
@@ -124,29 +135,29 @@ h1 span {
     background: var(--card);
     border: 2px dashed var(--borda);
     border-radius: 20px;
-    box-shadow: 0 0 0 8px var(--bg)
+    box-shadow: 0 0 0 8px var(--bg);
 }
 
 .resultado.ok {
     border-style: solid;
     border-color: var(--verde-br);
-    background: var(--verde-bg)
+    background: var(--verde-bg);
 }
 
 .titulo {
     font-size: 1.5rem;
     font-weight: 800;
-    color: var(--verde)
+    color: var(--verde);
 }
 
 .sub {
-    font-weight: 700
+    font-weight: 700;
 }
 
 .nums,
 .dica {
     font-size: 1rem;
-    color: var(--tx2)
+    color: var(--tx2);
 }
 
 .card {
@@ -154,12 +165,12 @@ h1 span {
     border: 2px solid var(--borda);
     border-radius: 20px;
     padding: 16px;
-    margin-bottom: 12px
+    margin-bottom: 12px;
 }
 
 .card.venc {
     border-color: var(--verde-br);
-    background: var(--verde-bg)
+    background: var(--verde-bg);
 }
 
 h2 {
@@ -167,7 +178,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     font-size: 1.1rem;
-    font-weight: 800
+    font-weight: 800;
 }
 
 .selo {
@@ -175,12 +186,12 @@ h2 {
     color: var(--on-verde);
     border-radius: 999px;
     padding: 2px 12px;
-    font-size: .9rem
+    font-size: .9rem;
 }
 
 .selo[hidden],
 .pack[hidden] {
-    display: none
+    display: none;
 }
 
 label {
@@ -188,25 +199,29 @@ label {
     font-weight: 700;
     font-size: 1rem;
     color: var(--tx2);
-    margin: 12px 0 6px
+    margin: 12px 0 6px;
 }
 
 .campo,
 .linha {
     display: flex;
-    gap: 8px
+    gap: 8px;
 }
 
 .campo {
     align-items: center;
     padding-left: 14px;
     border: 2px solid var(--borda);
-    border-radius: 14px
+    border-radius: 14px;
 }
 
 .campo span {
     font-weight: 700;
-    color: var(--tx2)
+    color: var(--tx2);
+}
+
+button {
+    cursor: pointer;
 }
 
 input,
@@ -219,37 +234,37 @@ select {
     background: transparent;
     color: var(--tx);
     font-size: 1.4rem;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .campo input {
     flex: 1;
     width: 100%;
-    border: 0
+    border: 0;
 }
 
 .linha input {
-    flex: 1
+    flex: 1;
 }
 
 select {
     width: 96px;
-    background: var(--card)
+    background: var(--card);
 }
 
 ::placeholder {
     color: var(--tx2);
-    opacity: .75
+    opacity: .75;
 }
 
 :focus-visible,
 .campo:focus-within {
     outline: 3px solid var(--verde-br);
-    outline-offset: 2px
+    outline-offset: 2px;
 }
 
 .campo input:focus-visible {
-    outline: none
+    outline: none;
 }
 
 .link {
@@ -260,24 +275,23 @@ select {
     background: none;
     color: var(--verde);
     font-weight: 700;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .pack input {
-    width: 100%
+    width: 100%;
 }
 
 .total {
     margin-top: 6px;
     min-height: 1.4em;
-    color: var(--tx2)
+    color: var(--tx2);
 }
 
 .unit {
     margin-top: 8px;
-    min-height: 1.6em;
     font-size: 1.2rem;
-    font-weight: 800
+    font-weight: 800;
 }
 
 .sr {
@@ -285,5 +299,5 @@ select {
     width: 1px;
     height: 1px;
     overflow: hidden;
-    clip: rect(0 0 0 0)
+    clip: rect(0 0 0 0);
 }
