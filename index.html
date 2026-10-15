@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>QualLeva?! Comparador de preços</title>
+
+    <meta name="description" content="Descubra qual embalagem vale mais a pena, por kg ou por litro.">
+
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+    <link rel="icon" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="topo">
+        <h1>Qual<span>Leva</span>?!</h1>
+        <button id="limpar" type="button">Limpar</button>
+    </header>
+
+    <main>
+        <div class="seg" role="group" aria-label="O que você está comparando?">
+            <button type="button" data-cat="peso" aria-pressed="true">Peso <small>g · kg</small></button>
+            <button type="button" data-cat="liquido" aria-pressed="false">Líquido <small>ml · L</small></button>
+        </div>
+        <section id="resultado" class="resultado"></section>
+        <p id="anuncio" class="sr" role="status"></p>
+        <div id="cards"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
