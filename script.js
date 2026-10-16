@@ -1,7 +1,7 @@
 const $ = s => document.querySelector(s), $$ = s => document.querySelectorAll(s);
 const CATS = {
-    peso: { un: [['g', .001], ['kg', 1]], base: 'kg', ph: '400' },
-    liquido: { un: [['ml', .001], ['L', 1]], base: 'L', ph: '350' }
+    peso: { un: [['g', .001], ['kg', 1]], base: 'kg', ph: 'Ex: 400' },
+    liquido: { un: [['ml', .001], ['L', 1]], base: 'L', ph: 'Ex: 350' }
 };
 const OPC = ['A', 'B'], el = (p, o) => $(`#${p}-${o}`);
 const brl = n => n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
