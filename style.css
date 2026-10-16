@@ -320,3 +320,20 @@ select {
     color: var(--verde);
     font-weight: 700;
 }
+
+.rodape .zap {
+    min-height: 48px;
+    padding: 0 20px;
+    margin-bottom: 8px;
+    border: 2px solid var(--borda);
+    border-radius: 999px;
+    color: var(--tx);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.rodape .zap:active {
+    transform: scale(0.95);
+    background-color: var(--verde-bg);
+    border: 2px solid var(--verde);
+}
