@@ -6,8 +6,8 @@ const ARQ = [
     'style.css',
     'script.js',
     'manifest.webmanifest',
-    'icons/icon-192.png',
-    'icons/icon-512.png'
+    'icons/i192.png',
+    'icons/i512.png'
 ];
 
 self.addEventListener('install', e =>
